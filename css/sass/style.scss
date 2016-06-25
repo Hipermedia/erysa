@@ -24,30 +24,30 @@ Text Domain: shbase
 @import "support/_utilidades.scss"; /* Clases utilitarias */
 
 /*imGrid plugin*/
-@import "support/imgrid/_imgrid.scss";
-@import "support/imgrid/_imgrid.hover.scss";
-@import "support/imgrid/hover/_apollo.scss";
-@import "support/imgrid/hover/_bubba.scss";
-@import "support/imgrid/hover/_chico.scss";
-@import "support/imgrid/hover/_duke.scss";
-@import "support/imgrid/hover/_goliath.scss";
-@import "support/imgrid/hover/_hera.scss";
-@import "support/imgrid/hover/_hover.scss";
-@import "support/imgrid/hover/_jazz.scss";
-@import "support/imgrid/hover/_julia.scss";
-@import "support/imgrid/hover/_kira.scss";
-@import "support/imgrid/hover/_lexi.scss";
-@import "support/imgrid/hover/_lily.scss";
-@import "support/imgrid/hover/_marley.scss";
-@import "support/imgrid/hover/_milo.scss";
-@import "support/imgrid/hover/_ming.scss";
-@import "support/imgrid/hover/_oscar.scss";
-@import "support/imgrid/hover/_romeo.scss";
-@import "support/imgrid/hover/_ruby.scss";
-@import "support/imgrid/hover/_sadie.scss";
-@import "support/imgrid/hover/_sarah.scss";
-@import "support/imgrid/hover/_steve.scss";
-@import "support/imgrid/hover/_zoe.scss";
+/*@import "support/imgrid/_imgrid.scss";*/
+/*@import "support/imgrid/_imgrid.hover.scss";*/
+/*@import "support/imgrid/hover/_apollo.scss";*/
+/*@import "support/imgrid/hover/_bubba.scss";*/
+/*@import "support/imgrid/hover/_chico.scss";*/
+/*@import "support/imgrid/hover/_duke.scss";*/
+/*@import "support/imgrid/hover/_goliath.scss";*/
+/*@import "support/imgrid/hover/_hera.scss";*/
+/*@import "support/imgrid/hover/_hover.scss";*/
+/*@import "support/imgrid/hover/_jazz.scss";*/
+/*@import "support/imgrid/hover/_julia.scss";*/
+/*@import "support/imgrid/hover/_kira.scss";*/
+/*@import "support/imgrid/hover/_lexi.scss";*/
+/*@import "support/imgrid/hover/_lily.scss";*/
+/*@import "support/imgrid/hover/_marley.scss";*/
+/*@import "support/imgrid/hover/_milo.scss";*/
+/*@import "support/imgrid/hover/_ming.scss";*/
+/*@import "support/imgrid/hover/_oscar.scss";*/
+/*@import "support/imgrid/hover/_romeo.scss";*/
+/*@import "support/imgrid/hover/_ruby.scss";*/
+/*@import "support/imgrid/hover/_sadie.scss";*/
+/*@import "support/imgrid/hover/_sarah.scss";*/
+/*@import "support/imgrid/hover/_steve.scss";*/
+/*@import "support/imgrid/hover/_zoe.scss";*/
 
 
 // Bootstrap Material Desing
@@ -74,6 +74,7 @@ Text Domain: shbase
 @import "blocks/_text.scss";
 @import "blocks/_nav.scss";
 @import "blocks/_redes_sociales.scss";
+@import "blocks/_primal-text.scss";
 
 /*--Documentos*/
 @import "blocks/_primal-docs.scss";
@@ -114,3 +115,8 @@ Text Domain: shbase
 /* La personalización directa comienza aquí
 -------------------------------------------------------------- */
 
+.tmp-block {
+	background: #202020;
+	height: 495px;
+	margin-bottom: 3px;
+}

@@ -7,19 +7,17 @@
 <section class="PrimalText">
 	<!-- Contenedor -->
 	<div class="PrimalText-contenido u-contenedor">
-		
-		<!-- Títulos de la sección -->
-		<h1 class="PrimalText-titulo">
-			<?php the_field('tituloTexto', 'option'); ?>
-		</h1>
-		<h2 class="PrimalText-subtitulo">
-			<?php the_field('subtituloTexto', 'option'); ?>
-		</h2>
+		<span class="rombo-gris"></span>	
+		<p><?php the_field('textoPlecaAzul', 'option'); ?></p>
+		<span class="rombo-negro"></span>
+	</div>
+</section>
 
-		<!-- Texto wysiwyg -->
-		<div class="PrimalText-texto">
-			<?php the_field('contenidoTexto', 'option'); ?>
-		</div>		
-
+<!-- PrimalBloques -->
+<section class="PrimalText PrimalText-clone">
+	<!-- Contenedor -->
+	<div class="u-contenedor">	
+		<h2><?php the_field('tituloBloquePortada', 'option'); ?></h2>
+		<div><?php the_field('textoBloquePortada', 'option'); ?></div>
 	</div>
 </section>

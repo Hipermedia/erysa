@@ -58,20 +58,38 @@
 <header id="header" class="Header" role="banner" >
     <section class="Header-contenido">
         
-        <!-- Logo -->
-        <a href="<?php inicio_url(); ?>" id="header-logo" class="Header-logo  animated flipInX">
-            <img src="<?php the_field('logo', 'option'); ?>" alt="<?php bloginfo('name'); ?>">
-        </a>
+        <div class="Header-contenidoBloque1">
+            <div class="u-contenedor">
+                <!-- Logo -->
+                <a href="<?php inicio_url(); ?>" id="header-logo" class="Header-logo  animated flipInX">
+                    <img src="<?php the_field('logo', 'option'); ?>" alt="<?php bloginfo('name'); ?>">
+                </a>
+
+                 <span class="Header-frase">
+                     Innovar <strong>para</strong> conservar
+                 </span>
+
+                 <div class="Header-telefono">
+                     <i></i>
+                     <div class="Header-telefonoDatos">
+                         <p>Llámanos</p>
+                         <p>01(228)6880106</p>
+                     </div>
+                 </div>
+
+                 <span class="rombo-azul"></span>
+            </div>
+        </div>
+
+        <div class="Header-contenidoBloque2">
+            <?php classicNav(); ?>
+        </div>
 
         <!-- Redes sociales -->
-        <?php primalSocialShare(); ?>
-        
+        <?php //primalSocialShare(); ?>
         <!-- Formulario de búsqueda [Catacterística superior] -->
-        <?php get_search_form(); ?>
-        
+        <?php //get_search_form(); ?>
         <!-- Menú principal -->  
-        <?php classicNav(); ?>
-        
     </section>
 </header>
 

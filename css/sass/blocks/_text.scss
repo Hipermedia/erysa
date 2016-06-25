@@ -3,9 +3,39 @@
 /*------------------------------------------------*/
 // PRIMAL
 .PrimalText {
-	padding-top: 6rem;
+	/*padding-top: 6rem;*/
+	background: #1972B9;
+	color: white;
+	font-size: 1.5rem;
+	text-align: justify;
 	
 	.PrimalText-contenido {
+		position: relative;
+		overflow: visible !important;
+
+		span {
+			display: block;
+			width: 196px;
+			height: 92px;
+			position: absolute;
+			background-repeat: no-repeat;
+		}
+
+		.rombo-gris {
+			background-image: url('images/rombo-02.png');
+			right: -195px;
+			top: -46px;
+		}
+
+		.rombo-negro {
+			background-image: url('images/rombo-03.png');
+			left: -195px;
+			bottom: -46px;
+		}
+
+		p {
+			padding: 3rem 5rem;
+		}
 		// Responsive
 		@media (max-width: $desktop-width) {
 			padding: 1.5rem;

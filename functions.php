@@ -631,3 +631,17 @@ function remove_admin_bar_links() {
     }
 }
 add_action( 'wp_before_admin_bar_render', 'remove_admin_bar_links' );
+
+
+add_action( 'init', 'create_post_type_servicios' );
+function create_post_type_servicios() {
+  register_post_type( 'cpt_servicios',
+    array(
+    	'supports' => array( 'title', 'editor', 'thumbnail' ),
+      	'labels' => array( 'name' => __( 'Servicios' ), 'singular_name' => __( 'CPT-Servicios' ) ),
+      	'public' => true,
+      	'has_archive' => true,
+      	'menu_icon' => 'dashicons-admin-tools'
+    )
+  );
+}

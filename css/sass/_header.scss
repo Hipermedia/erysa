@@ -8,8 +8,8 @@
 	clear: both;
 	display: block;
 	height: $header-height;
-	// background: $header-bg;
-	background: none;
+	background: $header-bg;
+	/*background: none;*/
 	margin: 0 auto;
 	z-index: 99;
 	position: relative; // Cambiar de relative a fixed si se quiere integrar el heade ral contenido
@@ -41,7 +41,7 @@
 	.Header-contenido {
 		display: block;
 		height: 100%;
-		width: $desktop-width;
+		/*width: $desktop-width;*/
 		position: relative;
 		margin: 0 auto;
 
@@ -52,36 +52,90 @@
 			display: inline-block;
 		}
 
-		/* Logo */
-		.Header-logo {
-			padding: .5rem 1rem;
-			display: block;
-			float: left;
-			max-width: 320px;
+		.Header-contenidoBloque1 {
+			/*background: #DADADA;*/
+			background-image: url('images/header-bg.png');
+			background-position: center;
+			background-repeat: repeat-x;
+			/*background-size: auto auto;*/
+			height: 107px;
+			margin-bottom: 4px;
 
-			@media (max-width: $tablet-width) {
-				max-width: 100%;
-				width: 100%;
-				text-align: center;
-				padding: 1rem 0;
-			}
-			img {
+			/* Logo */
+			.Header-logo {
+				padding: .9rem 0rem;
+				display: block;
+				float: left;
 				max-width: 320px;
-				@include transicion();
 
 				@media (max-width: $tablet-width) {
-					width: 75%;
+					max-width: 100%;
+					width: 100%;
+					text-align: center;
+					padding: 1rem 0;
 				}
-				&.tiny {
-					max-width: 144px;
+				img {
+					max-width: 320px;
+					@include transicion();
 
 					@media (max-width: $tablet-width) {
-						height: auto;
-						max-width: 320px;
+						width: 75%;
+					}
+					&.tiny {
+						max-width: 144px;
+
+						@media (max-width: $tablet-width) {
+							height: auto;
+							max-width: 320px;
+						}
 					}
 				}
 			}
+
+			.Header-frase {
+				font-weight: bold;
+				font-size: 1.15rem;
+				color: #454545;
+				padding-top: 4rem;
+				padding-left: 5rem;
+				display: inline-block;
+
+				strong {
+					color: #1972B9;
+				}
+			}
+
+			.Header-telefono {
+				font-weight: bold;
+				font-size: 1.95rem;
+				color: white;
+				float: right;
+				padding: 1rem 2rem 1rem 0rem;
+
+				i {
+					display: inline-block;
+					width: 44px;
+					height: 62px;
+					background-image: url('images/fon.png');
+				}
+				
+				.Header-telefonoDatos {
+					display: inline-block;
+				}
+			}
+
+			.rombo-azul {
+				display: block;
+				width: 196px;
+				height: 92px;
+				position: absolute;
+				background-repeat: no-repeat;
+				background-image: url('images/rombo-01.png');
+				right: -45px;
+				bottom: 62px;
+			}
 		}
+
 		/* Botones Sociales */
 		.social {
 			float: right;
