@@ -108,7 +108,8 @@ jQuery(document).ready(function($) {
         animation: "slide",
         animationLoop: true,
         slideshow: true,
-        itemWidth: 300,
+        itemMargin: 40,
+        itemWidth: 210,
         controlNav: false,
         prevText: "",
         nextText: ""
@@ -130,10 +131,11 @@ jQuery(document).ready(function($) {
 
     $('#filter-button').click(function () {
       $("#imgrid-portfolio").imgrid('filter', 'group1'); //Note that group1 not carries '.'
-    })
+    });
 
     $('#unfilter-button').click(function () {
       $("#imgrid-portfolio").imgrid('filter', 'all'); //Note that group1 not carries '.'
-    })
+    });
 
+    $('#demo-3').fsBanner({'trigger':'mouse'});
 });

@@ -3,51 +3,59 @@
 /*------------------------------------------------*/
 // PRIMAL
 .PrimalBlocks {
-	padding-top: 6rem;
+	/*padding-top: 6rem;*/
+	background: #202020;
 	
 	.PrimalBlocks-contenido {
 		// Responsive
 		@media (max-width: $desktop-width) {
 			padding: 1.5rem;
 		}
+
 		.PrimalBlocks-titulo {
-			color: $main-color-dark;
+			text-align: center;
+			background: #DADADA;
+			color: #1972B9;
+			font-weight: bold;
+			font-size: 1.9rem;
+			margin-bottom: 2rem;
+			padding: 1.2rem 0;
+			margin-bottom: 0;
 		}
+
 		.PrimalBlocks-subtitulo {
 			margin: 0 0 3rem;
 		}
-		.PrimalBlocks-block {
-			display: block;
-			float: left;
-			width: 30.3333333%;
-			margin: 0 1.5% 3rem;	
-			padding: .75rem;
-			@include gray-fancy-box; 
-			background-color: #eaeaea;
-			text-align: center;
-			// Responsive
-			@media (max-width: $tablet-width) {
-				width: 44%;
-				margin: 0 3% 3rem;
-			}
-			@media (max-width: $smaller-width) {
-				width: 100%;
-				margin: 0 0 3rem;
-			}
-			.PrimalBlocks-blockFigure {
-				// ...
-			}
-			.PrimalBlocks-blockTitulo {
-				// ...
-			}
-			.PrimalBlocks-blockSubtitulo {
-				// ...
-			}
-			.PrimalBlocks-blockDescripcion {
-				// ...
-			}
-			.PrimalBlocks-blockAction {
-				// ...
+
+		.PrimalBlocks-blocks {
+			overflow: hidden;
+
+			.PrimalBlocks-blocksBlock {
+				float: left;
+				width: 25%;
+				border-left: 3px solid #DADADA;
+				border-right: 3px solid #DADADA;
+				margin: .8rem 0;
+				padding: 0 .5rem; 
+
+				&:first-child {
+					border-left: none;
+				}
+
+				&:last-child {
+					border-right: none;
+				}
+				
+				h2 {
+					color: #1972B9;
+					font-weight: bold;
+					font-size: 1.9rem;
+					margin: .5rem 0;
+				}
+
+				div {
+
+				}
 			}
 		}
 	}

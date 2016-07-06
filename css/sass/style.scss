@@ -54,6 +54,8 @@ Text Domain: shbase
 //@import "support/bootstrap-material/_material.scss"; /* Bootstrap Material Desing */
 //@import "support/bootstrap-material/_material-wfont.scss"; /* Bootstrap Material Desing */
 //@import "support/bootstrap-material/_ripples.scss"; /* Bootstrap Material Desing */
+@import "support/_fsbanner.scss";
+
 
 /* Base
 ------------------------------------------*/
@@ -119,4 +121,23 @@ Text Domain: shbase
 	background: #202020;
 	height: 495px;
 	margin-bottom: 3px;
+
+	.u-contenedor {
+
+		.fsbanner {
+			height: 495px !important;
+
+			div {
+				height: 495px !important;
+
+				span {
+					-webkit-transform: rotate(-90deg); 
+					-moz-transform: rotate(-90deg);
+					left: 0;
+					bottom: 50%;
+					text-shadow: none !important;	
+				}
+			}
+		}
+	}
 }

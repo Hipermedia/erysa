@@ -25,12 +25,20 @@
 			background-image: url('images/rombo-02.png');
 			right: -195px;
 			top: -46px;
+
+			@media (max-width: 1400px) {
+				display: none;
+			}
 		}
 
 		.rombo-negro {
 			background-image: url('images/rombo-03.png');
 			left: -195px;
 			bottom: -46px;
+
+			@media (max-width: 1400px) {
+				display: none;
+			}
 		}
 
 		p {

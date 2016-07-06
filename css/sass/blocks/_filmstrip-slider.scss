@@ -1,4 +1,12 @@
 .FilmstripSlider {
+
+	.FilmstripSlider-titulo {
+		color: #1972B9;
+		text-align: center;
+		font-weight: bold;
+		font-size: 1.9rem;
+		margin-bottom: 2rem;
+	}
 	
 	.FilmstripSlider-contenido { 
 		border: none; 
@@ -29,6 +37,18 @@
 
 		.FilmstripSlider-slide {
 			text-align: center;
+			margin: 0 20px;
+			border-radius: 10px;
+			overflow: hidden;
+
+			&:first-child {
+				margin-left: 0;
+			}
+
+			&:last-child {
+				margin-right: 0;
+			}
+
 			@media (max-width: $tablet-width) {
 				
 			}
@@ -38,12 +58,18 @@
 				width: 100%;
 				display: block;
 				text-align: center;
+				height: 190px;
 			}
 
 			.FilmstripSlider-slideTitulo {
 				color: #333;
-				font-size: 1.5rem;
+				font-size: 1rem;
 				font-weight: bold;
+				background: #1972B9;
+				color: white;
+				margin: 0;
+				padding: 1rem .5rem;
+				height: 64px;
 			}
 
 			.FilmstripSlider-slideSubtitulo {

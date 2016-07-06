@@ -5701,6 +5701,16 @@ html[xmlns] .flexslider .slides { display: block; }
 /*@import "support/imgrid/hover/_sarah.scss";*/
 /*@import "support/imgrid/hover/_steve.scss";*/
 /*@import "support/imgrid/hover/_zoe.scss";*/
+.fsbanner, .fsbanner > div > span { /* obrigatório */ display: none; }
+
+div.fsbanner { /* obrigatorio */ position: relative; overflow: hidden; /* opcional */ height: 300px; color: white; font-size: 20px; font-family: Verdana; font-weight: bold; border-radius: 5px; -webkit-text-stroke: 1px black; }
+
+.fsbanner > div { position: absolute; background-size: cover; cursor: pointer; top: 0px; left: 0px; }
+
+.fsbanner > div .name { display: block; position: absolute; left: 10px; bottom: 10px; }
+
+.fsbanner > div .name.minimized { /* css3 */ transform: rotate(-90deg); transform-origin: left top 0; /* pode ser necessário ajustar isso dependendo da fonte escolhida */ bottom: -13px; left: 7px; }
+
 /* Base
 ------------------------------------------*/
 /*------------------------------------------------*/
@@ -5897,6 +5907,8 @@ table table { background-color: #fff; }
 
 .Header .Header-contenido .Header-contenidoBloque1 .rombo-azul { display: block; width: 196px; height: 92px; position: absolute; background-repeat: no-repeat; background-image: url("images/rombo-01.png"); right: -45px; bottom: 62px; }
 
+@media (max-width: 1400px) { .Header .Header-contenido .Header-contenidoBloque1 .rombo-azul { display: none; } }
+
 .Header .Header-contenido .social { float: right; padding: .5rem 1em; }
 
 @media (max-width: 880px) { .Header .Header-contenido .social { width: 100%; clear: both; text-align: center; } }
@@ -5932,7 +5944,7 @@ table table { background-color: #fff; }
 /*------------------------------------------------*/
 /* =Footer
 ----------------------------------------------- */
-.Footer { padding-top: 2rem; background: #fff; }
+.Footer { padding-top: 2rem; background: #fff; background-image: url("images/footer-bg.png"); height: 498px; background-position: center; background-repeat: no-repeat; }
 
 .Footer .Footer-creditos { width: 100%; /* Firma SH  */ }
 
@@ -6063,19 +6075,23 @@ form.suscripcion-boletin input[type="submit"]:hover, form.wpcf7-form input[type=
 /*------------------------------------------------*/
 /*------------------[BLOCKS]----------------------*/
 /*------------------------------------------------*/
-.PrimalBlocks { padding-top: 6rem; }
+.PrimalBlocks { /*padding-top: 6rem;*/ background: #202020; }
 
 @media (max-width: 1000px) { .PrimalBlocks .PrimalBlocks-contenido { padding: 1.5rem; } }
 
-.PrimalBlocks .PrimalBlocks-contenido .PrimalBlocks-titulo { color: #002964; }
+.PrimalBlocks .PrimalBlocks-contenido .PrimalBlocks-titulo { text-align: center; background: #DADADA; color: #1972B9; font-weight: bold; font-size: 1.9rem; margin-bottom: 2rem; padding: 1.2rem 0; margin-bottom: 0; }
 
 .PrimalBlocks .PrimalBlocks-contenido .PrimalBlocks-subtitulo { margin: 0 0 3rem; }
 
-.PrimalBlocks .PrimalBlocks-contenido .PrimalBlocks-block { display: block; float: left; width: 30.3333333%; margin: 0 1.5% 3rem; padding: .75rem; -webkit-border-radius: 0.5em; -moz-border-radius: 0.5em; border-radius: 0.5em; background: #eee; border: 1px solid #d8d8d8; padding: 1em; box-shadow: 0px 0px 1px 1px white inset; box-shadow: 0px 0px 1px 1px white inset, 0px 23px 21px -33px #000; background-color: #eaeaea; text-align: center; }
+.PrimalBlocks .PrimalBlocks-contenido .PrimalBlocks-blocks { overflow: hidden; }
 
-@media (max-width: 880px) { .PrimalBlocks .PrimalBlocks-contenido .PrimalBlocks-block { width: 44%; margin: 0 3% 3rem; } }
+.PrimalBlocks .PrimalBlocks-contenido .PrimalBlocks-blocks .PrimalBlocks-blocksBlock { float: left; width: 25%; border-left: 3px solid #DADADA; border-right: 3px solid #DADADA; margin: .8rem 0; padding: 0 .5rem; }
 
-@media (max-width: 560px) { .PrimalBlocks .PrimalBlocks-contenido .PrimalBlocks-block { width: 100%; margin: 0 0 3rem; } }
+.PrimalBlocks .PrimalBlocks-contenido .PrimalBlocks-blocks .PrimalBlocks-blocksBlock:first-child { border-left: none; }
+
+.PrimalBlocks .PrimalBlocks-contenido .PrimalBlocks-blocks .PrimalBlocks-blocksBlock:last-child { border-right: none; }
+
+.PrimalBlocks .PrimalBlocks-contenido .PrimalBlocks-blocks .PrimalBlocks-blocksBlock h2 { color: #1972B9; font-weight: bold; font-size: 1.9rem; margin: .5rem 0; }
 
 .SauteBlocks { padding-top: 6rem; display: inline-block; width: 100%; }
 
@@ -6122,7 +6138,11 @@ form.suscripcion-boletin input[type="submit"]:hover, form.wpcf7-form input[type=
 
 .PrimalText .PrimalText-contenido .rombo-gris { background-image: url("images/rombo-02.png"); right: -195px; top: -46px; }
 
+@media (max-width: 1400px) { .PrimalText .PrimalText-contenido .rombo-gris { display: none; } }
+
 .PrimalText .PrimalText-contenido .rombo-negro { background-image: url("images/rombo-03.png"); left: -195px; bottom: -46px; }
+
+@media (max-width: 1400px) { .PrimalText .PrimalText-contenido .rombo-negro { display: none; } }
 
 .PrimalText .PrimalText-contenido p { padding: 3rem 5rem; }
 
@@ -6472,6 +6492,8 @@ form.suscripcion-boletin input[type="submit"]:hover, form.wpcf7-form input[type=
 
 .VideoSlider .VideoSlider-contenido .flex-direction-nav a { overflow: visible; }
 
+.FilmstripSlider .FilmstripSlider-titulo { color: #1972B9; text-align: center; font-weight: bold; font-size: 1.9rem; margin-bottom: 2rem; }
+
 .FilmstripSlider .FilmstripSlider-contenido { border: none; margin: 0; }
 
 .FilmstripSlider .FilmstripSlider-contenido .flex-direction-nav a { font-size: 0; display: block; height: 100%; top: 20px; width: 80px; }
@@ -6480,11 +6502,15 @@ form.suscripcion-boletin input[type="submit"]:hover, form.wpcf7-form input[type=
 
 .FilmstripSlider .FilmstripSlider-contenido .flex-direction-nav .flex-next { right: 0 !important; background-image: linear-gradient(to right, transparent 0px, rgba(0, 0, 0, 0.5) 100%); background-repeat: repeat-x; }
 
-.FilmstripSlider .FilmstripSlider-contenido .FilmstripSlider-slide { text-align: center; }
+.FilmstripSlider .FilmstripSlider-contenido .FilmstripSlider-slide { text-align: center; margin: 0 20px; border-radius: 10px; overflow: hidden; }
 
-.FilmstripSlider .FilmstripSlider-contenido .FilmstripSlider-slide .FilmstripSlider-slideImagen { background: #EBEBEB; width: 100%; display: block; text-align: center; }
+.FilmstripSlider .FilmstripSlider-contenido .FilmstripSlider-slide:first-child { margin-left: 0; }
 
-.FilmstripSlider .FilmstripSlider-contenido .FilmstripSlider-slide .FilmstripSlider-slideTitulo { color: #333; font-size: 1.5rem; font-weight: bold; }
+.FilmstripSlider .FilmstripSlider-contenido .FilmstripSlider-slide:last-child { margin-right: 0; }
+
+.FilmstripSlider .FilmstripSlider-contenido .FilmstripSlider-slide .FilmstripSlider-slideImagen { background: #EBEBEB; width: 100%; display: block; text-align: center; height: 190px; }
+
+.FilmstripSlider .FilmstripSlider-contenido .FilmstripSlider-slide .FilmstripSlider-slideTitulo { color: #333; font-size: 1rem; font-weight: bold; background: #1972B9; color: white; margin: 0; padding: 1rem .5rem; height: 64px; }
 
 .FilmstripSlider .FilmstripSlider-contenido .FilmstripSlider-slide .FilmstripSlider-slideSubtitulo { color: #444; font-size: 1rem; font-weight: normal; }
 
@@ -6582,35 +6608,35 @@ form.suscripcion-boletin input[type="submit"]:hover, form.wpcf7-form input[type=
 
 @media (max-width: 880px) { .PrimalContacto .PrimalContacto-contenido .PrimalContacto-formulario .enviar input { width: 100%; } }
 
-.contacto { padding: 3rem 2rem 0; overflow: hidden; }
+.contacto { /*padding: 3rem 2rem 0;*/ overflow: hidden; background: #202020; padding-bottom: 2rem; }
 
 @media (max-width: 560px) { .contacto { padding: 0; } }
 
-.contacto .contenido-contacto .datos { float: left; width: 40%; padding-right: 1rem; }
+.contacto .contenido-contactoTitulo { background: #1972B9; color: white; text-align: center; font-weight: bold; font-size: 1.9rem; padding: 1.2rem 0; margin-bottom: 0; }
+
+.contacto .contenido-contacto { color: white; }
+
+.contacto .contenido-contacto .datos { float: left; width: 25%; /*padding-right: 1rem;*/ }
 
 @media (max-width: 880px) { .contacto .contenido-contacto .datos { float: none; width: 100%; padding: 1rem; text-align: center; } }
 
-.contacto .contenido-contacto .datos h3 i { margin-right: 1rem; }
+.contacto .contenido-contacto .datos h2 { color: #DADADA; font-weight: bold; font-size: 1.9rem; padding-top: 2rem; margin-bottom: .5rem; }
 
-.contacto .contenido-contacto .datos a { color: #212121; }
+.contacto .contenido-contacto .datos h3 { font-weight: bold; font-size: 1.25rem; margin-top: 0; border-bottom: 6px solid black; padding-bottom: 1rem; }
 
-.contacto .contenido-contacto .datos a .fa-facebook-square:hover { color: #3B5998; }
+.contacto .contenido-contacto .datos p { font-weight: 600; font-size: 1.125rem; margin-bottom: 0; }
 
-.contacto .contenido-contacto .datos a .fa-twitter-square:hover { color: #659FCB; }
-
-.contacto .contenido-contacto .datos a .fa-youtube-square:hover { color: #E12B28; }
-
-.contacto .contenido-contacto .datos a .fa-google-plus-square:hover { color: #DB4437; }
-
-.contacto .contenido-contacto .formulario { float: left; width: 60%; padding-left: 1rem; }
+.contacto .contenido-contacto .formulario { float: left; width: 75%; padding-right: 1rem; /*padding-left: 1rem;*/ }
 
 @media (max-width: 880px) { .contacto .contenido-contacto .formulario { width: 100%; padding: 1rem; } }
 
-.contacto .contenido-contacto .mapa { padding-top: 1rem; }
+.contacto .contenido-contacto .formulario h2 { font-size: 1.5rem; font-weight: bold; }
 
-@media (max-width: 880px) { .contacto .contenido-contacto .mapa { padding: 1rem; } }
+.contacto .contenido-contacto .formulario p { margin-bottom: .3rem; }
 
-.contacto .contenido-contacto .mapa iframe { width: 100% !important; padding: 1rem 0; }
+.contacto .contenido-contacto .formulario p input, .contacto .contenido-contacto .formulario p textarea { background: #DADADA; border: none; box-shadow: none; border-radius: 8px; color: #A5A5A5; }
+
+.contacto .contenido-contacto .formulario p .wpcf7-submit { background: #1972B9; color: white; }
 
 .MeteoroContact { position: relative; overflow: hidden; }
 
@@ -6662,3 +6688,9 @@ form.suscripcion-boletin input[type="submit"]:hover, form.wpcf7-form input[type=
 /* La personalización directa comienza aquí
 -------------------------------------------------------------- */
 .tmp-block { background: #202020; height: 495px; margin-bottom: 3px; }
+
+.tmp-block .u-contenedor .fsbanner { height: 495px !important; }
+
+.tmp-block .u-contenedor .fsbanner div { height: 495px !important; }
+
+.tmp-block .u-contenedor .fsbanner div span { -webkit-transform: rotate(-90deg); -moz-transform: rotate(-90deg); left: 0; bottom: 50%; text-shadow: none !important; }

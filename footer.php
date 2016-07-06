@@ -17,7 +17,6 @@
 </footer>
 
 <!-- JS personalizados del tema -->
-
 <?php imgridImagesloaded(); //nuevo plugin de imágenes ?>
 <?php imgridVelocity(); //nuevo plugin de imágenes ?> 
 <?php imgridVelocityUi(); //nuevo plugin de imágenes ?> 
@@ -31,6 +30,7 @@
 <?php bootstrapMaterial(); // Bootsrap - Material ?>
 <?php ripples(); // Complemento de Bootsrap - Material ?>
 <?php themejs(); // Los scripts personalizados del tema ?>
+<?php fsbanner(); ?>
 
 <?php wp_footer(); ?>
 </body>

@@ -621,6 +621,12 @@ $template_url = get_bloginfo( 'template_url' );
 	wp_enqueue_script( 'themejs', $template_url .'/js/theme.js', array('jquery'), '', 1);
 }
 
+// Scripts del tema
+function fsbanner() {
+$template_url = get_bloginfo( 'template_url' );
+	wp_enqueue_script( 'fsbanner', $template_url .'/js/fsbanner.js', array('jquery'), '', 1);
+}
+
 
 // Función que remueve el ícono para actualizar la versión de WP de la barra de administrador (no del admin panel)
 function remove_admin_bar_links() {
@@ -645,3 +651,4 @@ function create_post_type_servicios() {
     )
   );
 }
+
