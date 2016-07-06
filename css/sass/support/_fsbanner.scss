@@ -9,11 +9,8 @@ div.fsbanner {
 	/* opcional */
 	height:300px;
 	color:white;
-	font-size:20px;
-	font-family:Verdana;
-	font-weight:bold;
+	font-size: 2.33rem;
 	border-radius:5px;
-   -webkit-text-stroke: 1px black;
 }
 
 
@@ -27,14 +24,25 @@ div.fsbanner {
 .fsbanner > div .name { 
 	display:block;
 	position:absolute; 
-	left:10px; 
-	bottom:10px;
+	/*left:10px; */
+	/*bottom:10px;*/
+
+	&::after {
+		content: "";
+		display: block;
+		width: 14px;
+		height: 37px;
+		background-image: url('images/after.png');
+		background-repeat: no-repeat;
+		transform: rotate(90deg);
+		margin: 1rem auto 0;
+	}
 }
 .fsbanner > div .name.minimized {
 	/* css3 */
 	transform: rotate(-90deg);
-	transform-origin: left top 0;
+	/*transform-origin: left top 0;*/
 	/* pode ser necessário ajustar isso dependendo da fonte escolhida */
-	bottom: -13px;
-    left: 7px;
+	/*bottom: -13px;*/
+    /*left: 7px;*/
 }

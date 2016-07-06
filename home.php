@@ -17,10 +17,10 @@ get_header(); ?>
 	<div class="tmp-block">
 		<div class="u-contenedor">
 			<div class="fsbanner" id="demo-3">
-			  <div style="background-image:url(https://unsplash.it/789/525?image=885)"><span class="name">Industrial</span></div>
-			  <div style="background-image:url(https://unsplash.it/789/525?image=884)"><span class="name">Urbano</span></div>
-			  <div style="background-image:url(https://unsplash.it/789/525?image=883)"><span class="name">Residencial</span></div>
-			  <div style="background-image:url(https://unsplash.it/789/525?image=882)"><span class="name">Doméstico</span></div>
+			  <div style="background-image:url( <?php the_field('imgPrincipal1', 'option') ?> )"><span class="name"><?php the_field('txtImgPrincipal1', 'option'); ?></span></div>
+			  <div style="background-image:url( <?php the_field('imgPrincipal2', 'option') ?> )"><span class="name"><?php the_field('txtImgPrincipal2', 'option'); ?></span></div>
+			  <div style="background-image:url( <?php the_field('imgPrincipal3', 'option') ?> )"><span class="name"><?php the_field('txtImgPrincipal3', 'option'); ?></span></div>
+			  <div style="background-image:url( <?php the_field('imgPrincipal4', 'option') ?> )"><span class="name"><?php the_field('txtImgPrincipal4', 'option'); ?></span></div>
 			</div>
 		</div>
 	</div>

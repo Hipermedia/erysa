@@ -1,4 +1,5 @@
 .FilmstripSlider {
+	overflow: visible !important;
 
 	.FilmstripSlider-titulo {
 		color: #1972B9;
@@ -17,21 +18,27 @@
 			a {
 				font-size: 0;
 				display: block;
-				height: 100%;
-				top: 20px;
-				width: 80px;
+				height: 96px;
+				top: 100px;
+				width: 50px;
+
+				&::before {
+					display: none;
+				}
 			}
 
 			.flex-prev {
-				left: 0 !important;
-				background-image: linear-gradient(to right, rgba(0, 0, 0, 0.5) 0px, transparent 100%);
-				background-repeat: repeat-x;
+				/*left: 0 !important;*/
+				background-image: url('images/izq.png');
+				background-repeat: no-repeat;
+				left: -5rem;
 			}
 
 			.flex-next {
-				right: 0 !important;
-				background-image: linear-gradient(to right, transparent 0px, rgba(0, 0, 0, 0.5) 100%);
-				background-repeat: repeat-x;
+				/*right: 0 !important;*/
+				background-image: url('images/der.png');
+				background-repeat: no-repeat;
+				right: -5rem;
 			}
 		}
 

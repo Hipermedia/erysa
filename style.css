@@ -5703,13 +5703,15 @@ html[xmlns] .flexslider .slides { display: block; }
 /*@import "support/imgrid/hover/_zoe.scss";*/
 .fsbanner, .fsbanner > div > span { /* obrigatório */ display: none; }
 
-div.fsbanner { /* obrigatorio */ position: relative; overflow: hidden; /* opcional */ height: 300px; color: white; font-size: 20px; font-family: Verdana; font-weight: bold; border-radius: 5px; -webkit-text-stroke: 1px black; }
+div.fsbanner { /* obrigatorio */ position: relative; overflow: hidden; /* opcional */ height: 300px; color: white; font-size: 2.33rem; border-radius: 5px; }
 
 .fsbanner > div { position: absolute; background-size: cover; cursor: pointer; top: 0px; left: 0px; }
 
-.fsbanner > div .name { display: block; position: absolute; left: 10px; bottom: 10px; }
+.fsbanner > div .name { display: block; position: absolute; /*left:10px; */ /*bottom:10px;*/ }
 
-.fsbanner > div .name.minimized { /* css3 */ transform: rotate(-90deg); transform-origin: left top 0; /* pode ser necessário ajustar isso dependendo da fonte escolhida */ bottom: -13px; left: 7px; }
+.fsbanner > div .name::after { content: ""; display: block; width: 14px; height: 37px; background-image: url("images/after.png"); background-repeat: no-repeat; transform: rotate(90deg); margin: 1rem auto 0; }
+
+.fsbanner > div .name.minimized { /* css3 */ transform: rotate(-90deg); /*transform-origin: left top 0;*/ /* pode ser necessário ajustar isso dependendo da fonte escolhida */ /*bottom: -13px;*/ /*left: 7px;*/ }
 
 /* Base
 ------------------------------------------*/
@@ -6092,6 +6094,8 @@ form.suscripcion-boletin input[type="submit"]:hover, form.wpcf7-form input[type=
 .PrimalBlocks .PrimalBlocks-contenido .PrimalBlocks-blocks .PrimalBlocks-blocksBlock:last-child { border-right: none; }
 
 .PrimalBlocks .PrimalBlocks-contenido .PrimalBlocks-blocks .PrimalBlocks-blocksBlock h2 { color: #1972B9; font-weight: bold; font-size: 1.9rem; margin: .5rem 0; }
+
+.PrimalBlocks .PrimalBlocks-contenido .PrimalBlocks-blocks .PrimalBlocks-blocksBlock div { color: white; font-weight: bold; font-size: 1.125rem; }
 
 .SauteBlocks { padding-top: 6rem; display: inline-block; width: 100%; }
 
@@ -6492,15 +6496,19 @@ form.suscripcion-boletin input[type="submit"]:hover, form.wpcf7-form input[type=
 
 .VideoSlider .VideoSlider-contenido .flex-direction-nav a { overflow: visible; }
 
+.FilmstripSlider { overflow: visible !important; }
+
 .FilmstripSlider .FilmstripSlider-titulo { color: #1972B9; text-align: center; font-weight: bold; font-size: 1.9rem; margin-bottom: 2rem; }
 
 .FilmstripSlider .FilmstripSlider-contenido { border: none; margin: 0; }
 
-.FilmstripSlider .FilmstripSlider-contenido .flex-direction-nav a { font-size: 0; display: block; height: 100%; top: 20px; width: 80px; }
+.FilmstripSlider .FilmstripSlider-contenido .flex-direction-nav a { font-size: 0; display: block; height: 96px; top: 100px; width: 50px; }
 
-.FilmstripSlider .FilmstripSlider-contenido .flex-direction-nav .flex-prev { left: 0 !important; background-image: linear-gradient(to right, rgba(0, 0, 0, 0.5) 0px, transparent 100%); background-repeat: repeat-x; }
+.FilmstripSlider .FilmstripSlider-contenido .flex-direction-nav a::before { display: none; }
 
-.FilmstripSlider .FilmstripSlider-contenido .flex-direction-nav .flex-next { right: 0 !important; background-image: linear-gradient(to right, transparent 0px, rgba(0, 0, 0, 0.5) 100%); background-repeat: repeat-x; }
+.FilmstripSlider .FilmstripSlider-contenido .flex-direction-nav .flex-prev { /*left: 0 !important;*/ background-image: url("images/izq.png"); background-repeat: no-repeat; left: -5rem; }
+
+.FilmstripSlider .FilmstripSlider-contenido .flex-direction-nav .flex-next { /*right: 0 !important;*/ background-image: url("images/der.png"); background-repeat: no-repeat; right: -5rem; }
 
 .FilmstripSlider .FilmstripSlider-contenido .FilmstripSlider-slide { text-align: center; margin: 0 20px; border-radius: 10px; overflow: hidden; }
 
@@ -6693,4 +6701,4 @@ form.suscripcion-boletin input[type="submit"]:hover, form.wpcf7-form input[type=
 
 .tmp-block .u-contenedor .fsbanner div { height: 495px !important; }
 
-.tmp-block .u-contenedor .fsbanner div span { -webkit-transform: rotate(-90deg); -moz-transform: rotate(-90deg); left: 0; bottom: 50%; text-shadow: none !important; }
+.tmp-block .u-contenedor .fsbanner div span { -webkit-transform: rotate(-90deg); -moz-transform: rotate(-90deg); left: 5%; bottom: 50%; text-shadow: none !important; }
