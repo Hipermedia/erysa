@@ -6725,9 +6725,9 @@ form.suscripcion-boletin input[type="submit"]:hover, form.wpcf7-form input[type=
 
 @media (max-width: 560px) { .tmp-block .u-contenedor .fsbanner { height: auto !important; } }
 
-.tmp-block .u-contenedor .fsbanner div { height: 495px !important; left: 0 !important; }
+.tmp-block .u-contenedor .fsbanner div { height: 495px !important; }
 
-@media (max-width: 560px) { .tmp-block .u-contenedor .fsbanner div { position: relative; display: block; background-position: center; height: 150px !important; } }
+@media (max-width: 560px) { .tmp-block .u-contenedor .fsbanner div { position: relative; display: block; background-position: center; height: 150px !important; width: 100% !important; left: 0 !important; } }
 
 .tmp-block .u-contenedor .fsbanner div span { -webkit-transform: rotate(-90deg); -moz-transform: rotate(-90deg); left: 5%; bottom: 50%; text-shadow: none !important; }
 

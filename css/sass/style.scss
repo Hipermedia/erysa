@@ -137,13 +137,14 @@ Text Domain: shbase
 
 			div {
 				height: 495px !important;
-				left: 0 !important;
 
 				@media (max-width: $smaller-width) {
 					position: relative;
 					display: block;
 					background-position: center;
 					height: 150px !important;
+					width: 100% !important;
+					left: 0 !important;
 				}
 
 				span {
