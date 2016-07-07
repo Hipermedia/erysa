@@ -5891,7 +5891,7 @@ table table { background-color: #fff; }
 
 .Header .Header-contenido .Header-contenidoBloque1 .Header-logo img { max-width: 320px; -webkit-transition: all 0.5s ease-in-out; -moz-transition: all 0.5s ease-in-out; -o-transition: all 0.5s ease-in-out; transition: all 0.5s ease-in-out; }
 
-@media (max-width: 880px) { .Header .Header-contenido .Header-contenidoBloque1 .Header-logo img { width: 75%; } }
+@media (max-width: 880px) { .Header .Header-contenido .Header-contenidoBloque1 .Header-logo img { /*width: 75%;*/ } }
 
 .Header .Header-contenido .Header-contenidoBloque1 .Header-logo img.tiny { max-width: 144px; }
 
@@ -5899,9 +5899,13 @@ table table { background-color: #fff; }
 
 .Header .Header-contenido .Header-contenidoBloque1 .Header-frase { font-weight: bold; font-size: 1.15rem; color: #454545; padding-top: 4rem; padding-left: 5rem; display: inline-block; }
 
+@media (max-width: 880px) { .Header .Header-contenido .Header-contenidoBloque1 .Header-frase { display: none; } }
+
 .Header .Header-contenido .Header-contenidoBloque1 .Header-frase strong { color: #1972B9; }
 
 .Header .Header-contenido .Header-contenidoBloque1 .Header-telefono { font-weight: bold; font-size: 1.95rem; color: white; float: right; padding: 1rem 2rem 1rem 0rem; }
+
+@media (max-width: 880px) { .Header .Header-contenido .Header-contenidoBloque1 .Header-telefono { display: none; } }
 
 .Header .Header-contenido .Header-contenidoBloque1 .Header-telefono i { display: inline-block; width: 44px; height: 62px; background-image: url("images/fon.png"); }
 
@@ -6079,7 +6083,7 @@ form.suscripcion-boletin input[type="submit"]:hover, form.wpcf7-form input[type=
 /*------------------------------------------------*/
 .PrimalBlocks { /*padding-top: 6rem;*/ background: #202020; }
 
-@media (max-width: 1000px) { .PrimalBlocks .PrimalBlocks-contenido { padding: 1.5rem; } }
+@media (max-width: 1000px) { .PrimalBlocks .PrimalBlocks-contenido { /*padding: 1.5rem;*/ } }
 
 .PrimalBlocks .PrimalBlocks-contenido .PrimalBlocks-titulo { text-align: center; background: #DADADA; color: #1972B9; font-weight: bold; font-size: 1.9rem; margin-bottom: 2rem; padding: 1.2rem 0; margin-bottom: 0; }
 
@@ -6088,6 +6092,8 @@ form.suscripcion-boletin input[type="submit"]:hover, form.wpcf7-form input[type=
 .PrimalBlocks .PrimalBlocks-contenido .PrimalBlocks-blocks { overflow: hidden; }
 
 .PrimalBlocks .PrimalBlocks-contenido .PrimalBlocks-blocks .PrimalBlocks-blocksBlock { float: left; width: 25%; border-left: 3px solid #DADADA; border-right: 3px solid #DADADA; margin: .8rem 0; padding: 0 .5rem; }
+
+@media (max-width: 560px) { .PrimalBlocks .PrimalBlocks-contenido .PrimalBlocks-blocks .PrimalBlocks-blocksBlock { float: none; width: 100%; text-align: center; border-left: none !important; border-right: none !important; border-bottom: 3px solid #DADADA; } }
 
 .PrimalBlocks .PrimalBlocks-contenido .PrimalBlocks-blocks .PrimalBlocks-blocksBlock:first-child { border-left: none; }
 
@@ -6149,6 +6155,8 @@ form.suscripcion-boletin input[type="submit"]:hover, form.wpcf7-form input[type=
 @media (max-width: 1400px) { .PrimalText .PrimalText-contenido .rombo-negro { display: none; } }
 
 .PrimalText .PrimalText-contenido p { padding: 3rem 5rem; }
+
+@media (max-width: 560px) { .PrimalText .PrimalText-contenido p { padding: 1rem; text-align: center; } }
 
 @media (max-width: 1000px) { .PrimalText .PrimalText-contenido { padding: 1.5rem; } }
 
@@ -6214,7 +6222,7 @@ form.suscripcion-boletin input[type="submit"]:hover, form.wpcf7-form input[type=
 
 @media (max-width: 768px) { .Header-contenidoBloque2 .mainNav a { height: 2.625em; } }
 
-@media (max-width: 880px) { .Header-contenidoBloque2 .mainNav a { width: 100%; border-radius: 0; margin: 0; } }
+@media (max-width: 880px) { .Header-contenidoBloque2 .mainNav a { width: 100%; border-radius: 0; margin: 0; color: black; } }
 
 .Header-contenidoBloque2 .mainNav a:hover, .Header-contenidoBloque2 .mainNav a:focus { background: none; /* Show a solid color for older browsers */ color: white; }
 
@@ -6262,6 +6270,8 @@ form.suscripcion-boletin input[type="submit"]:hover, form.wpcf7-form input[type=
 .anli-ss .pinterest { background: url(images/ss/anli/pinterest.png) left top no-repeat; }
 
 .PrimalText-clone { background: white; }
+
+@media (max-width: 1000px) { .PrimalText-clone { padding: 0 1rem; } }
 
 .PrimalText-clone h2 { color: #1972B9; text-align: center; font-weight: bold; font-size: 1.8rem; }
 
@@ -6502,13 +6512,23 @@ form.suscripcion-boletin input[type="submit"]:hover, form.wpcf7-form input[type=
 
 .FilmstripSlider .FilmstripSlider-contenido { border: none; margin: 0; }
 
+.FilmstripSlider .FilmstripSlider-contenido .flex-control-nav { display: none; position: relative; margin-top: 2rem; bottom: 0; }
+
+@media (max-width: 1000px) { .FilmstripSlider .FilmstripSlider-contenido .flex-control-nav { display: block; } }
+
+@media (max-width: 1000px) { .FilmstripSlider .FilmstripSlider-contenido .flex-direction-nav { display: none; } }
+
 .FilmstripSlider .FilmstripSlider-contenido .flex-direction-nav a { font-size: 0; display: block; height: 96px; top: 100px; width: 50px; }
 
 .FilmstripSlider .FilmstripSlider-contenido .flex-direction-nav a::before { display: none; }
 
 .FilmstripSlider .FilmstripSlider-contenido .flex-direction-nav .flex-prev { /*left: 0 !important;*/ background-image: url("images/izq.png"); background-repeat: no-repeat; left: -5rem; }
 
+@media (max-width: 1200px) { .FilmstripSlider .FilmstripSlider-contenido .flex-direction-nav .flex-prev { left: 0; } }
+
 .FilmstripSlider .FilmstripSlider-contenido .flex-direction-nav .flex-next { /*right: 0 !important;*/ background-image: url("images/der.png"); background-repeat: no-repeat; right: -5rem; }
+
+@media (max-width: 1200px) { .FilmstripSlider .FilmstripSlider-contenido .flex-direction-nav .flex-next { right: 0; } }
 
 .FilmstripSlider .FilmstripSlider-contenido .FilmstripSlider-slide { text-align: center; margin: 0 20px; border-radius: 10px; overflow: hidden; }
 
@@ -6624,6 +6644,8 @@ form.suscripcion-boletin input[type="submit"]:hover, form.wpcf7-form input[type=
 
 .contacto .contenido-contacto { color: white; }
 
+@media (max-width: 1000px) { .contacto .contenido-contacto { padding: 0 1rem; } }
+
 .contacto .contenido-contacto .datos { float: left; width: 25%; /*padding-right: 1rem;*/ }
 
 @media (max-width: 880px) { .contacto .contenido-contacto .datos { float: none; width: 100%; padding: 1rem; text-align: center; } }
@@ -6697,8 +6719,16 @@ form.suscripcion-boletin input[type="submit"]:hover, form.wpcf7-form input[type=
 -------------------------------------------------------------- */
 .tmp-block { background: #202020; height: 495px; margin-bottom: 3px; }
 
+@media (max-width: 560px) { .tmp-block { height: auto; } }
+
 .tmp-block .u-contenedor .fsbanner { height: 495px !important; }
 
-.tmp-block .u-contenedor .fsbanner div { height: 495px !important; }
+@media (max-width: 560px) { .tmp-block .u-contenedor .fsbanner { height: auto !important; } }
+
+.tmp-block .u-contenedor .fsbanner div { height: 495px !important; left: 0 !important; }
+
+@media (max-width: 560px) { .tmp-block .u-contenedor .fsbanner div { position: relative; display: block; background-position: center; height: 150px !important; } }
 
 .tmp-block .u-contenedor .fsbanner div span { -webkit-transform: rotate(-90deg); -moz-transform: rotate(-90deg); left: 5%; bottom: 50%; text-shadow: none !important; }
+
+@media (max-width: 560px) { .tmp-block .u-contenedor .fsbanner div span { -webkit-transform: rotate(0deg); -moz-transform: rotate(0deg); bottom: 0; top: 2rem; left: 10%; } }

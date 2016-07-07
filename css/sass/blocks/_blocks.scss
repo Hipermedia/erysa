@@ -9,7 +9,7 @@
 	.PrimalBlocks-contenido {
 		// Responsive
 		@media (max-width: $desktop-width) {
-			padding: 1.5rem;
+			/*padding: 1.5rem;*/
 		}
 
 		.PrimalBlocks-titulo {
@@ -37,6 +37,15 @@
 				border-right: 3px solid #DADADA;
 				margin: .8rem 0;
 				padding: 0 .5rem; 
+
+				@media (max-width: $smaller-width) {
+					float: none;
+					width: 100%;
+					text-align: center;
+					border-left: none !important;
+					border-right: none !important;
+					border-bottom: 3px solid #DADADA;
+				}
 
 				&:first-child {
 					border-left: none;

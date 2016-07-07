@@ -79,7 +79,7 @@
 					@include transicion();
 
 					@media (max-width: $tablet-width) {
-						width: 75%;
+						/*width: 75%;*/
 					}
 					&.tiny {
 						max-width: 144px;
@@ -99,6 +99,9 @@
 				padding-top: 4rem;
 				padding-left: 5rem;
 				display: inline-block;
+				@media (max-width: $tablet-width) {
+					display: none;
+				}
 
 				strong {
 					color: #1972B9;
@@ -111,6 +114,9 @@
 				color: white;
 				float: right;
 				padding: 1rem 2rem 1rem 0rem;
+				@media (max-width: $tablet-width) {
+					display: none;
+				}
 
 				i {
 					display: inline-block;

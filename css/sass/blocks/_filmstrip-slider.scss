@@ -11,9 +11,24 @@
 	
 	.FilmstripSlider-contenido { 
 		border: none; 
-		margin: 0; 
+		margin: 0;
+
+		.flex-control-nav {
+			display: none;
+			position: relative;
+			margin-top: 2rem;
+			bottom: 0;
+			
+			@media (max-width: $desktop-width) {
+				display: block;
+			}
+		} 
 
 		.flex-direction-nav {
+
+			@media (max-width: $desktop-width) {
+				display: none;
+			}
 			
 			a {
 				font-size: 0;
@@ -32,6 +47,9 @@
 				background-image: url('images/izq.png');
 				background-repeat: no-repeat;
 				left: -5rem;
+				@media (max-width: 1200px) {
+					left: 0;
+				}
 			}
 
 			.flex-next {
@@ -39,6 +57,9 @@
 				background-image: url('images/der.png');
 				background-repeat: no-repeat;
 				right: -5rem;
+				@media (max-width: 1200px) {
+					right: 0;
+				}
 			}
 		}
 

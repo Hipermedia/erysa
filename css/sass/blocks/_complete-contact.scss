@@ -3,6 +3,7 @@
 	overflow: hidden;
 	background: #202020;
 	padding-bottom: 2rem;
+
 	@media (max-width: $smaller-width) {
 		padding: 0;
 	}
@@ -19,6 +20,10 @@
 
 	.contenido-contacto {
 		color: white;
+
+		@media (max-width: $desktop-width) {
+			padding: 0 1rem;
+		}
 
 		.datos {
 			float: left;

@@ -43,6 +43,11 @@
 
 		p {
 			padding: 3rem 5rem;
+
+			@media (max-width: $smaller-width) {
+				padding: 1rem;
+				text-align: center;
+			}
 		}
 		// Responsive
 		@media (max-width: $desktop-width) {

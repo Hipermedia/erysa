@@ -110,7 +110,7 @@ jQuery(document).ready(function($) {
         slideshow: true,
         itemMargin: 40,
         itemWidth: 210,
-        controlNav: false,
+        controlNav: true,
         prevText: "",
         nextText: ""
     });
